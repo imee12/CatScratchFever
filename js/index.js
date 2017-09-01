@@ -14,6 +14,8 @@ import rootReducer from './reducers';
 import Header from './components/common/Header';
 import IndexContainer from './containers/IndexContainer';
 import MainCatContainer from './containers/MainCatContainer';
+import KittenContainer from './containers/KittenContainer';
+
 
 require('../less/app.less');
 
@@ -26,13 +28,16 @@ const store = createStore(rootReducer, composeEnhancers(
   applyMiddleware(...middleware)
 ));
 
+
+
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <div>
         <Header />
-          <Route exact path="/" component={IndexContainer} />
+          <Route exact path="/" component={IndexContainer}/>
           <Route path="/mainCat" component={MainCatContainer} />
+          <Route path="/kittens" component={KittenContainer} />
       </div>
     </ConnectedRouter>
   </Provider>,

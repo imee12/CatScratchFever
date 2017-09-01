@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import CatEyes from './CatEyes'
 
 // import Button from './common/Button';
 
 export default class Index extends Component {
+
+  checkTheLocation = () => {
+    if(this.props.location.pathname === '/') {
+      console.log("this is the main cat yo");
+      document.querySelector("html").style.backgroundColor = "#161616";
+    }
+ }
   // static displayName = 'Package Manager Index';
   //
   // static defaultProps = {
@@ -24,9 +32,9 @@ export default class Index extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Are you looking for cats?</h2>
-
+      <div id="indexCat">
+        <div onClick={this.checkTheLocation()}className="space20"></div>
+        <CatEyes />
       </div>
     );
   }

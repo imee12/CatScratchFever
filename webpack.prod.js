@@ -33,7 +33,7 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(true),
     new HtmlWebpackPlugin({
-      title: 'We Brunner',
+      title: 'CATCITY',
       template: 'index.ejs',
       filename: `${PATHS.htmlout}/index.html`,
       hash: true

@@ -6,11 +6,15 @@ import CatEyes from './CatEyes'
 
 export default class Index extends Component {
 
+
+
   checkTheLocation = () => {
     if(this.props.location.pathname === '/') {
       console.log("this is the main cat yo");
       document.querySelector("html").style.backgroundColor = "#161616";
     }
+
+
  }
   // static displayName = 'Package Manager Index';
   //

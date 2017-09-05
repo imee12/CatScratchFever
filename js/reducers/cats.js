@@ -3,7 +3,8 @@ import { handleActions } from 'redux-actions';
 import * as actions from '../actions/cats';
 
 const initialState = {
-    cats: null
+    cats: null,
+    kittens: null
 };
 
 export default handleActions({
